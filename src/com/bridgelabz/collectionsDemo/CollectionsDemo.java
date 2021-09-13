@@ -1,9 +1,11 @@
 package com.bridgelabz.collectionsDemo;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.Stack;
@@ -84,6 +86,21 @@ public class CollectionsDemo {
 			System.out.println(element);
 		}
 	}
+	
+	public static void doMapDemo() {
+
+		Map<Integer, String> map = new HashMap<>();
+
+		System.out.println("\nInside Map Demo\n");
+		map.put(100, "Amrit");
+		map.put(101, "Vijay");
+		map.put(102, "Rahul");
+		map.put(101, "Surya");
+
+		for(Map.Entry<Integer, String> mapper:map.entrySet()) {
+			System.out.println(mapper.getKey()+" "+mapper.getValue());
+		}
+	}
 
 	public static void main(String[] args) {
 
@@ -91,6 +108,7 @@ public class CollectionsDemo {
 		doStackDemo();
 		doQueueDemo();
 		doSetDemo();
+		doMapDemo();
 		
 	}
 
