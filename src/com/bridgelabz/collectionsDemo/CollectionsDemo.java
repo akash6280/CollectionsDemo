@@ -1,9 +1,11 @@
 package com.bridgelabz.collectionsDemo;
 
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.Stack;
 
 public class CollectionsDemo {
@@ -47,7 +49,7 @@ public class CollectionsDemo {
 
 		PriorityQueue<String> queue = new PriorityQueue<>();
 
-		System.out.println(" Queue Demo");
+		System.out.println("Queue Demo");
 		queue.add("Amit Sharma");
 		queue.add("Vijay Raj");
 		queue.add("Jai Shankar");
@@ -68,12 +70,27 @@ public class CollectionsDemo {
 			System.out.println(iterator.next());
 		}
 	}
+	
+	public static void doSetDemo( ) {
+
+		Set<String> set = new LinkedHashSet<>();
+
+		System.out.println("\nInside Set Demo\n");
+		set.add("Ravi");
+		set.add("Vijay");
+		set.add("Ravi");
+		set.add("Ajay");
+		for(String element: set) {
+			System.out.println(element);
+		}
+	}
 
 	public static void main(String[] args) {
 
 		doListDemo();
 		doStackDemo();
 		doQueueDemo();
+		doSetDemo();
 		
 	}
 
