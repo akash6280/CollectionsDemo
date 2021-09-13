@@ -3,6 +3,7 @@ package com.bridgelabz.collectionsDemo;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Stack;
 
 public class CollectionsDemo {
@@ -42,11 +43,37 @@ public class CollectionsDemo {
 		}
 	}
 
+	public static void doQueueDemo() {
+
+		PriorityQueue<String> queue = new PriorityQueue<>();
+
+		System.out.println(" Queue Demo");
+		queue.add("Amit Sharma");
+		queue.add("Vijay Raj");
+		queue.add("Jai Shankar");
+		queue.add("Raj");
+		System.out.println("head:"+queue.element());
+		System.out.println("head:"+queue.peek());
+		System.out.println("Iterating the queue elements:");
+
+		Iterator<String> iterator = queue.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		queue.remove();
+		queue.poll();
+		System.out.println("After removing two elements:");
+		iterator = queue.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
 
 	public static void main(String[] args) {
 
 		doListDemo();
 		doStackDemo();
+		doQueueDemo();
 		
 	}
 
